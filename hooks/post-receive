@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Your custom script to run on push
+/script1.sh
