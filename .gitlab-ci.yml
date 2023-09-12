@@ -1,0 +1,16 @@
+stages:
+  - build
+
+
+build:
+  stage: build
+  script:
+    - echo $CF_API_TOKEN
+    - . ./script.sh  $CF_ROUTE
+    - docker build -t my-cloudflare-worker --build-arg CF_ACCOUNT_ID=$CF_ACCOUNT_ID  --build-arg CF_API_TOKEN=$CF_API_TOKEN --build-arg CF_NAME=$CF_NAME  --build-arg CF_ZONE_ID=$CF_ZONE_ID . 
+    - docker run my-cloudflare-worker
+  tags: 
+    - build-runner-tekab
+  only: 
+  - develop
+
