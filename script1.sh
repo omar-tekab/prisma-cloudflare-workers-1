@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Specify the text you want to add
-text_to_add="This text was added automatically."
+text_to_add="This text was added automaticalfffffffffffffffffffly."
 
 # Specify the file path
 file_path="omar.txt"
